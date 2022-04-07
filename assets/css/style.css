@@ -1,0 +1,618 @@
+/* this file is loaded by index.html and styles the page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #AD7EB9;
+    font-weight: bold;
+}
+
+/* header */
+
+header {
+    color: #fff;
+}
+
+header div.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.top>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header div.top nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header div.top nav ul {
+    display: flex;
+}
+
+header div.top nav ul li {
+    font-size: 1rem;
+    list-style: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+header div.top nav ul li:hover {
+    background-color: #AD7EB9;
+    /*border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;*/
+}
+
+header div.banner {
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+header div.banner h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+header div.banner p {
+    font-size: 1.2rem;
+}
+
+/* Profils */
+
+main {
+    background-color: #fff;
+}
+
+main div.profils {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+main div.profils .profil {
+    display: flex;
+    width: calc(100% / 5);
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-top: 2px solid #683874;
+    border-radius: 3px;
+    padding: 20px 50px;
+    margin: 25px;
+    box-shadow: 0 3px 5px #ccc;
+}
+
+main div.profils .profil div.image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid #683874;
+    border-radius: 100%;
+    padding: 5px;
+    box-shadow: 0px 0px 20px 0px #ccc;
+}
+
+main div.profils .profil div.image img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+main div.profils .profil .prenom {
+    margin: 15px auto 5px;
+}
+
+main div.profils .profil .skills {
+    margin: 5px -20px;
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+}
+
+main div.profils .profil .contacts ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+main div.profils .profil .contacts ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    color: #555;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+}
+
+main div.profils .profil .contacts ul li:active {
+    transform: scale(.92);
+}
+
+main div.profils .profil .contacts ul li a i {
+    color: #683874;
+}
+
+footer {
+    border-top: thin solid rgba(0, 0, 0, .12);
+}
+
+footer div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #683874;
+    font-weight: bold;
+}
+
+footer span a i.fa {
+    color: rgb(29, 161, 242);
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 1.5em;
+}
+
+/* Mon espace */
+
+.mon-espace section {
+    border-top: thin solid rgba(0, 0, 0, .12);
+    margin-top: 10px;
+}
+
+.mon-espace section form {
+    max-width: 640px;
+    margin: 30px auto;
+}
+
+.mon-espace section form .col {
+    flex-basis: 100%;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.mon-espace section form .col:last-of-type {
+    margin-right: 0;
+}
+
+/* Identification */
+
+.identification section {
+    width: 800px;
+    margin: 5% auto;
+}
+
+.identification section .col:first-of-type {
+    text-align: center;
+}
+
+.identification section .col {
+    max-width: 45%;
+}
+
+.identification .v-ligne {
+    width: 1px;
+    min-height: 100%;
+    background-color: #555;
+}
+
+.identification i.fa {
+    color: #AD7EB9;
+}
+
+.identification .form-actions {
+    display: flex;
+}
+
+/* Fenêtre modale */
+
+.g-modal-cover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #e5e5e5ce;
+    overflow: auto;
+    width: 100%;
+    z-index: 100;
+}
+
+.g-modal {
+    width: 600px;
+    margin: 7% auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid rgba(136, 136, 136, 0.424);
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+}
+
+.g-modal-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 5px;
+}
+
+.g-modal-entete .titre {
+    font-size: 1.375rem;
+}
+
+.g-modal-entete span.close {
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    font-weight: 100;
+    transform: rotate(45deg);
+}
+
+.g-modal-entete span.close::before {
+    content: "+";
+}
+
+.g-modal-corps {
+    margin: 25px 15px;
+    font-size: 1.15rem;
+}
+
+.g-modal-pied {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+/* Composants */
+
+form label {
+    display: block;
+    margin: 10px auto 0;
+    color: #683874;
+    font-weight: bold;
+}
+
+form label+span.description {
+    font-size: 1rem;
+    font-style: italic;
+    color: #888;
+}
+
+.champ {
+    background-color: #fff;
+    width: 100%;
+    outline: none;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #888;
+}
+
+.champ:focus {
+    border: 1px solid #AD7EB9;
+}
+
+select.champ {
+    cursor: pointer;
+}
+
+.message-erreur {
+    display: block;
+    background-color: #dc286f;
+    font-size: .9rem;
+    color: #fff;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.g-btn {
+    border: 1px solid #AD7EB9;
+    padding: 10px 10px;
+    border-radius: 4px;
+    background-color: #683874;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px #ccc;
+    outline: none;
+}
+
+.g-btn:hover {
+    background-color: #AD7EB9;
+}
+
+.g-btn[disabled] {
+    border: 1px solid #a7a7a7;
+    background-color: #a7a7a7;
+}
+
+.g-btn-blanc.g-btn-blanc {
+    border: 1px solid #AD7EB9;
+    padding: 10px 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #AD7EB9;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px #ccc;
+    outline: none;
+}
+
+.g-btn-blanc:hover {
+    background-color: #f6fbf5;
+}
+
+.chargement {
+    background-image: url("../img/chargement.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 200px 20px;
+}
+
+.alerte {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 10px 16px 0;
+}
+
+.alerte.vert {
+    background-color: #AD7EB9;
+}
+
+.alerte.rouge {
+    background-color: #dc286f;
+}
+
+/* Utilitaires */
+
+.cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fd-vert {
+    background-color: #683874;
+}
+
+.fd-blanc {
+    background-color: #fff;
+}
+
+.txt-blanc {
+    color: #fff;
+}
+
+.txt-vert {
+    color: #683874;
+}
+
+.txt-gras {
+    font-weight: bold;
+}
+
+.txt-italique {
+    font-style: italic;
+}
+
+.ligne {
+    width: 100%;
+}
+
+.bloc {
+    padding: 20px 80px;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.m-h-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.v-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.v-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.b-r-1 {
+    border-right: 1px solid #fff;
+}
+
+.clic:active {
+    transform: scale(0.96);
+}
+
+.cacher {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-block {
+    display: block;
+}
+
+img.gris {
+    filter: grayscale(100%);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/*============= RESPONSIVE DESIGN ==============*/
+
+@media screen and (min-width: 1201px) {
+    header .ligne, main, footer div, header div.banner {
+        max-width: 1201px;
+        margin: auto;
+    }
+    main div.profils .profil {
+        width: calc(100% / 3.5);
+        margin: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header div.banner {
+        max-width: 90%;
+    }
+    main div.profils .profil {
+        width: calc(100% / 3.3);
+        margin: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main div.profils .profil {
+        width: calc(100% / 2.3);
+        margin: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    main .identification section {
+        width: 100%;
+        margin: 5% auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header div.banner {
+        max-width: 100%;
+    }
+    header div.banner h1 {
+        margin-top: 0;
+    }
+    main div.profils .profil {
+        width: 350px;
+        margin: 10px auto;
+    }
+    main>h2, main>p {
+        text-align: center;
+    }
+    header div.top nav {
+        margin-top: 15px;
+    }
+    header div.top nav ul {
+        align-items: center;
+    }
+    header div.top nav ul li {
+        flex: 1;
+        text-align: center;
+    }
+    header div.top {
+        display: block;
+    }
+    main .identification section.cols {
+        display: block;
+    }
+    main .identification section.cols .col {
+        max-width: 100%;
+        margin-top: 45px;
+    }
+    main .identification section.cols .col:first-child {
+        display: none;
+    }
+    .g-modal {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    body {
+        font-size: 1rem;
+    }
+    main div.profils .profil {
+        width: 100%;
+        margin: 10px auto;
+    }
+    main div.profils .profil div.image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bloc {
+        padding: 20px 30px;
+    }
+    .g-modal {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+    .g-modal-cover {
+        background-color: #fff;
+        overflow: auto;
+        position: absolute;
+    }
+}

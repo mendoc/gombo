@@ -1,0 +1,20 @@
+{
+    "name": "Gombo",
+    "short_name": "Gombo",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#683874",
+    "background_color": "#ad7eb9",
+    "start_url": "https://gombo.ga",
+    "display": "standalone"
+}
